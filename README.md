@@ -9,7 +9,9 @@ This is a brand new fork - the purpose is to continue Java development. For now 
 * Modularized packages
 * Remove Scala support
 * Gradlew support
-* Publish
+* Ease parboiled1 (java) development
+* Provide a separate package for examples
+* Publish!
 
 Going forwards, maybe we will:
 
