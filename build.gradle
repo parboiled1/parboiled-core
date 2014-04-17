@@ -15,6 +15,10 @@ apply(plugin: "osgi");
 apply(plugin: "idea");
 apply(plugin: "eclipse");
 
+tasks.withType(Compile) {
+  options.encoding = 'UTF-8'
+}
+
 dependencies {
     testCompile(group: "org.testng", name: "testng", version: "6.8.7") {
         exclude(group: "junit", module: "junit");
