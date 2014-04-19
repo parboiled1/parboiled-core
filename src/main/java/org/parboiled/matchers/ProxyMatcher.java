@@ -137,7 +137,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
     }
 
     public Rule label(String label) {
-        if (target == null || target instanceof ProxyMatcher) {
+        if (target == null) {
             // if we have no target yet we need to save the label and "apply" it later
             if (this.label == null) {
                 setLabel(label);
@@ -234,7 +234,8 @@ public class ProxyMatcher implements Matcher, Cloneable {
         if (matcher instanceof ProxyMatcher) {
             ProxyMatcher proxyMatcher = (ProxyMatcher) matcher;
             if (proxyMatcher.dirty) proxyMatcher.apply();
-            return proxyMatcher.target;
+            return proxyMatcher.target == null ? proxyMatcher
+                : proxyMatcher.target;
         }
         return matcher;
     }
