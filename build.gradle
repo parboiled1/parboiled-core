@@ -32,6 +32,8 @@ javadoc.options.links("http://jsr-305.googlecode.com/svn/trunk/javadoc/");
 
 repositories {
     mavenCentral();
+    mavenLocal();
+    jcenter();
 }
 
 test {
