@@ -3,7 +3,7 @@
 This package contains the core mechanics or Parboiled1.
 
 See the [project info page](https://github.com/parboiled1/project-info) for more
-information.
+information, including available versions.
 
 ## How to build
 
