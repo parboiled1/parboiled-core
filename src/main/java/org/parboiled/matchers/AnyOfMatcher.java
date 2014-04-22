@@ -16,10 +16,12 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
-import org.parboiled.support.Characters;
 import org.parboiled.matchervisitors.MatcherVisitor;
+import org.parboiled.support.Characters;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
+import static org.parboiled.common.Preconditions.checkArgument;
 
 /**
  * A {@link Matcher} matching a single character out of a given {@link org.parboiled.support.Characters} set.

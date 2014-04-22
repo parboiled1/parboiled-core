@@ -16,12 +16,13 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
 import org.parboiled.matchervisitors.MatcherVisitor;
 
 import java.util.List;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * Special wrapping matcher that performs memoization of the last mismatch of the wrapped sub rule.

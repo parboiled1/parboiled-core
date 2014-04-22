@@ -16,7 +16,8 @@
 
 package org.parboiled.trees;
 
-import static org.parboiled.common.Preconditions.*;
+import static org.parboiled.common.Preconditions.checkArgNotNull;
+import static org.parboiled.common.Preconditions.checkElementIndex;
 
 /**
  * General utility methods for operating on tree, i.e. graphs consisting of {@link TreeNode}s.

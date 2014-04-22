@@ -16,9 +16,9 @@
 
 package org.parboiled.common;
 
-import static org.parboiled.common.Preconditions.*;
-
 import java.util.Collection;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 public final class Predicates {
 

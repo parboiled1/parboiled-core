@@ -16,11 +16,12 @@
 
 package org.parboiled.errors;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.buffers.InputBuffer;
 import org.parboiled.support.MatcherPath;
 
 import java.util.List;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A {@link ParseError} describing one or more input characters that are illegal with regard to the underlying

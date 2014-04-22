@@ -16,10 +16,11 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.matchervisitors.MatcherVisitor;
 import org.parboiled.support.Chars;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A {@link org.parboiled.matchers.Matcher} matching any single character except EOI.

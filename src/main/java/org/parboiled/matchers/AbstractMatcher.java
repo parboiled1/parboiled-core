@@ -16,12 +16,13 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
 import org.parboiled.common.ImmutableList;
 import org.parboiled.common.Utils;
 import org.parboiled.trees.ImmutableGraphNode;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * Abstract base class of most regular {@link Matcher}s.

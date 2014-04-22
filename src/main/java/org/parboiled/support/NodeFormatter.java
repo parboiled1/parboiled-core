@@ -16,11 +16,12 @@
 
 package org.parboiled.support;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.Node;
 import org.parboiled.buffers.InputBuffer;
 import org.parboiled.common.Formatter;
 import org.parboiled.common.StringUtils;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A simple Formatter<Node> that provides String representation for parse tree nodes.

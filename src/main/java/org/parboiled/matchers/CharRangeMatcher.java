@@ -16,11 +16,12 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
-import static org.parboiled.common.StringUtils.escape;
-
 import org.parboiled.MatcherContext;
 import org.parboiled.matchervisitors.MatcherVisitor;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
+import static org.parboiled.common.Preconditions.checkArgument;
+import static org.parboiled.common.StringUtils.escape;
 
 /**
  * A {@link Matcher} matching a single character out of a given range of characters.

@@ -16,7 +16,9 @@
 
 package org.parboiled.buffers;
 
-import static org.parboiled.support.Chars.*;
+import static org.parboiled.support.Chars.DEDENT;
+import static org.parboiled.support.Chars.EOI;
+import static org.parboiled.support.Chars.INDENT;
 
 public final class InputBufferUtils {
 

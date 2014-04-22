@@ -16,13 +16,14 @@
 
 package org.parboiled.trees;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.common.Formatter;
 import org.parboiled.common.Predicate;
 import org.parboiled.common.Predicates;
 
 import java.util.Collection;
 import java.util.HashSet;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * General utility methods for operating on directed graphs (consisting of {@link GraphNode}s).

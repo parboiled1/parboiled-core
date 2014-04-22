@@ -17,15 +17,15 @@
 package org.parboiled.common;
 
 import org.parboiled.Node;
-import static org.parboiled.common.Utils.getTypeArguments;
 import org.parboiled.support.NodeFormatter;
-
-import static org.parboiled.common.Utils.humanize;
-import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static org.parboiled.common.Utils.getTypeArguments;
+import static org.parboiled.common.Utils.humanize;
+import static org.testng.Assert.assertEquals;
 
 public class UtilsTest {
 

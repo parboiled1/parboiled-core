@@ -16,12 +16,13 @@
 
 package org.parboiled.support;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.Node;
 import org.parboiled.buffers.InputBuffer;
 import org.parboiled.errors.ParseError;
 
 import java.util.List;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A simple container encapsulating the result of a parsing run.

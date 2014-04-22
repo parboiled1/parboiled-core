@@ -16,11 +16,23 @@
 
 package org.parboiled.common;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.errors.GrammarException;
 
-import java.lang.reflect.*;
-import java.util.*;
+import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.GenericArrayType;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * General utility methods.

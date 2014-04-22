@@ -16,7 +16,15 @@
 
 package org.parboiled.matchervisitors;
 
-import org.parboiled.matchers.*;
+import org.parboiled.matchers.AbstractMatcher;
+import org.parboiled.matchers.FirstOfMatcher;
+import org.parboiled.matchers.Matcher;
+import org.parboiled.matchers.OneOrMoreMatcher;
+import org.parboiled.matchers.OptionalMatcher;
+import org.parboiled.matchers.SequenceMatcher;
+import org.parboiled.matchers.TestMatcher;
+import org.parboiled.matchers.TestNotMatcher;
+import org.parboiled.matchers.ZeroOrMoreMatcher;
 
 import java.util.HashSet;
 import java.util.List;

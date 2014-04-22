@@ -16,7 +16,12 @@
 
 package org.parboiled.matchervisitors;
 
-import org.parboiled.matchers.*;
+import org.parboiled.matchers.AnyMatcher;
+import org.parboiled.matchers.AnyOfMatcher;
+import org.parboiled.matchers.CharIgnoreCaseMatcher;
+import org.parboiled.matchers.CharMatcher;
+import org.parboiled.matchers.CharRangeMatcher;
+import org.parboiled.matchers.CustomMatcher;
 import org.parboiled.support.Characters;
 
 import java.util.Random;

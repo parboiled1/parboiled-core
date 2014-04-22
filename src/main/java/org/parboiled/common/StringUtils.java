@@ -20,7 +20,6 @@ import org.parboiled.support.Characters;
 import org.parboiled.support.Chars;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Iterator;
 
 /**

@@ -17,8 +17,11 @@
 package org.parboiled.matchervisitors;
 
 import org.parboiled.MatcherContext;
-import org.parboiled.matchers.*;
-import org.parboiled.support.Chars;
+import org.parboiled.matchers.AbstractMatcher;
+import org.parboiled.matchers.Matcher;
+import org.parboiled.matchers.OneOrMoreMatcher;
+import org.parboiled.matchers.SequenceMatcher;
+import org.parboiled.matchers.ZeroOrMoreMatcher;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -16,16 +16,17 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
-import org.parboiled.errors.GrammarException;
 import org.parboiled.buffers.InputBuffer;
+import org.parboiled.errors.GrammarException;
 
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A specialized FirstOfMatcher that handles FirstOf(string, string, ...) rules much faster that the regular

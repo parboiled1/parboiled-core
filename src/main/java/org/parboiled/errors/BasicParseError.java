@@ -16,8 +16,9 @@
 
 package org.parboiled.errors;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.buffers.InputBuffer;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A basic {@link ParseError} implementation for a one-char parse error with an optional error message.

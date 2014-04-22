@@ -25,9 +25,19 @@ import org.parboiled.common.ImmutableLinkedList;
 import org.parboiled.common.ImmutableList;
 import org.parboiled.common.Preconditions;
 import org.parboiled.errors.InvalidInputError;
-import org.parboiled.matchers.*;
-import org.parboiled.matchervisitors.*;
-import org.parboiled.support.Checks;
+import org.parboiled.matchers.AbstractMatcher;
+import org.parboiled.matchers.ActionMatcher;
+import org.parboiled.matchers.EmptyMatcher;
+import org.parboiled.matchers.FirstOfMatcher;
+import org.parboiled.matchers.Matcher;
+import org.parboiled.matchers.OneOrMoreMatcher;
+import org.parboiled.matchers.SequenceMatcher;
+import org.parboiled.matchers.TestMatcher;
+import org.parboiled.matchervisitors.DefaultMatcherVisitor;
+import org.parboiled.matchervisitors.FollowMatchersVisitor;
+import org.parboiled.matchervisitors.GetStarterCharVisitor;
+import org.parboiled.matchervisitors.IsSingleCharMatcherVisitor;
+import org.parboiled.matchervisitors.IsStarterCharVisitor;
 import org.parboiled.support.MatcherPath;
 import org.parboiled.support.ParsingResult;
 
@@ -36,8 +46,13 @@ import java.util.List;
 
 import static org.parboiled.common.Preconditions.checkArgNotNull;
 import static org.parboiled.common.Preconditions.checkState;
-import static org.parboiled.matchers.MatcherUtils.unwrap;
-import static org.parboiled.support.Chars.*;
+import static org.parboiled.support.Chars.DEL_ERROR;
+import static org.parboiled.support.Chars.EOI;
+import static org.parboiled.support.Chars.INS_ERROR;
+import static org.parboiled.support.Chars.RESYNC;
+import static org.parboiled.support.Chars.RESYNC_END;
+import static org.parboiled.support.Chars.RESYNC_EOI;
+import static org.parboiled.support.Chars.RESYNC_START;
 
 /**
  * A {@link org.parboiled.parserunners.ParseRunner} implementation that is able to recover from {@link org.parboiled.errors.InvalidInputError}s in the input and therefore

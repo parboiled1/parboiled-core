@@ -16,12 +16,13 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
 import org.parboiled.matchervisitors.MatcherVisitor;
 
 import java.util.List;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A {@link Matcher} that executes all of its submatchers in sequence and only succeeds if all submatchers succeed.

@@ -16,10 +16,11 @@
 
 package org.parboiled.support;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.common.StringUtils;
 
 import java.util.Arrays;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * An immutable, set-like aggregation of (relatively few) characters that allows for an inverted semantic

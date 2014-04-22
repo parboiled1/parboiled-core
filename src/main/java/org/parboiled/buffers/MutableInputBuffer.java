@@ -20,7 +20,8 @@ import org.parboiled.support.IndexRange;
 import org.parboiled.support.Position;
 
 import java.util.Arrays;
-import static org.parboiled.common.Preconditions.*;
+
+import static org.parboiled.common.Preconditions.checkArgument;
 
 /**
  * An InputBuffer wrapping another InputBuffer and providing for the ability to insert (and undo) characters at

@@ -16,14 +16,12 @@
 
 package org.parboiled;
 
-import static org.parboiled.common.Preconditions.*;
-
 import org.parboiled.common.ImmutableLinkedList;
 import org.parboiled.common.StringUtils;
 import org.parboiled.matchers.Matcher;
 import org.parboiled.trees.ImmutableTreeNode;
 
-import java.util.List;
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * An immutable implementation of the Node interface.

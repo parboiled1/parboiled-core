@@ -16,8 +16,10 @@
 
 package org.parboiled.support;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.matchers.Matcher;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
+import static org.parboiled.common.Preconditions.checkArgument;
 
 /**
  * Holds a snapshot of the current {@link Matcher} stack at a certain point during the parsing process.

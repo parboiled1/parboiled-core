@@ -16,8 +16,11 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
-import org.parboiled.*;
+import org.parboiled.Action;
+import org.parboiled.ContextAware;
+import org.parboiled.MatcherContext;
+import org.parboiled.Rule;
+import org.parboiled.SkippableAction;
 import org.parboiled.errors.ActionError;
 import org.parboiled.errors.ActionException;
 import org.parboiled.matchervisitors.MatcherVisitor;
@@ -25,6 +28,8 @@ import org.parboiled.matchervisitors.MatcherVisitor;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A {@link org.parboiled.matchers.Matcher} that not actually matches input but runs a given parser {@link Action}.

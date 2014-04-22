@@ -23,7 +23,6 @@ import org.parboiled.common.Predicate;
 import org.parboiled.common.Predicates;
 import org.parboiled.common.Tuple2;
 import org.parboiled.matchers.Matcher;
-import org.parboiled.matchers.ProxyMatcher;
 
 import java.util.HashSet;
 import java.util.Set;

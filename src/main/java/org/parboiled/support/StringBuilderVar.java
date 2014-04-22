@@ -16,8 +16,6 @@
 
 package org.parboiled.support;
 
-import org.parboiled.common.Utils;
-
 /**
  * Simple specialization of a {@link org.parboiled.support.Var} for StringBuilders.
  * Provides a few convenience helper methods.

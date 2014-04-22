@@ -18,7 +18,8 @@ package org.parboiled.common;
 
 import java.util.AbstractSequentialList;
 import java.util.ListIterator;
-import static org.parboiled.common.Preconditions.*;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 public class ImmutableLinkedList<T> extends AbstractSequentialList<T> {
 

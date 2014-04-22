@@ -16,8 +16,6 @@
 
 package org.parboiled.errors;
 
-import static org.parboiled.common.Preconditions.*;
-
 import org.parboiled.buffers.InputBuffer;
 import org.parboiled.common.Formatter;
 import org.parboiled.common.StringUtils;
@@ -28,6 +26,9 @@ import org.parboiled.support.ParsingResult;
 import org.parboiled.support.Position;
 
 import java.util.List;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
+import static org.parboiled.common.Preconditions.checkArgument;
 
 /**
  * General utility methods regarding parse errors.

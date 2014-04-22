@@ -18,7 +18,6 @@ package org.parboiled.buffers;
 
 import org.parboiled.common.FileUtils;
 import org.parboiled.errors.IllegalIndentationException;
-import org.parboiled.support.Chars;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

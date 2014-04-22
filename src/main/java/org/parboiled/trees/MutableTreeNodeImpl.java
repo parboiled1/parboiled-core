@@ -19,7 +19,8 @@ package org.parboiled.trees;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import static org.parboiled.common.Preconditions.*;
+
+import static org.parboiled.common.Preconditions.checkElementIndex;
 
 /**
  * A base implementation of the {@link MutableTreeNode}.

@@ -16,11 +16,12 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
 import org.parboiled.errors.GrammarException;
 import org.parboiled.matchervisitors.MatcherVisitor;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A {@link Matcher} that repeatedly tries its submatcher against the input. Always succeeds.

@@ -16,9 +16,10 @@
 
 package org.parboiled.matchers;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.Rule;
 import org.parboiled.matchervisitors.MatcherVisitor;
+
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * Base class of custom matcher implementations. If you want to implement custom matchers they have to be derived

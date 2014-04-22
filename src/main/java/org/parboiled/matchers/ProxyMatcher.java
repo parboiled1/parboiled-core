@@ -22,7 +22,7 @@ import org.parboiled.matchervisitors.MatcherVisitor;
 
 import java.util.List;
 
-import static org.parboiled.common.Preconditions.*;
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * A {@link Matcher} that delegates all {@link Rule} and {@link Matcher} interface methods to another {@link Matcher}.

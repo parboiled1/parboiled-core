@@ -21,7 +21,6 @@ import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
 import org.parboiled.buffers.InputBuffer;
 import org.parboiled.errors.BasicParseError;
-import org.parboiled.errors.InvalidInputError;
 import org.parboiled.matchers.TestNotMatcher;
 import org.parboiled.support.ParsingResult;
 

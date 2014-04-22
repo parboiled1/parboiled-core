@@ -16,8 +16,23 @@
 
 package org.parboiled.matchervisitors;
 
+import org.parboiled.matchers.AbstractMatcher;
 import org.parboiled.matchers.ActionMatcher;
-import org.parboiled.matchers.*;
+import org.parboiled.matchers.AnyMatcher;
+import org.parboiled.matchers.AnyOfMatcher;
+import org.parboiled.matchers.CharIgnoreCaseMatcher;
+import org.parboiled.matchers.CharMatcher;
+import org.parboiled.matchers.CharRangeMatcher;
+import org.parboiled.matchers.CustomMatcher;
+import org.parboiled.matchers.EmptyMatcher;
+import org.parboiled.matchers.FirstOfMatcher;
+import org.parboiled.matchers.NothingMatcher;
+import org.parboiled.matchers.OneOrMoreMatcher;
+import org.parboiled.matchers.OptionalMatcher;
+import org.parboiled.matchers.SequenceMatcher;
+import org.parboiled.matchers.TestMatcher;
+import org.parboiled.matchers.TestNotMatcher;
+import org.parboiled.matchers.ZeroOrMoreMatcher;
 
 /**
  * A basic {@link MatcherVisitor} implementation that delegates all visiting methods to one default value method.

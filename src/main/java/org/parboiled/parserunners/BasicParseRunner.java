@@ -16,18 +16,13 @@
 
 package org.parboiled.parserunners;
 
-import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatchHandler;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
-import org.parboiled.buffers.DefaultInputBuffer;
 import org.parboiled.buffers.InputBuffer;
-import org.parboiled.errors.ParseError;
-import org.parboiled.matchers.Matcher;
-import org.parboiled.support.*;
+import org.parboiled.support.ParsingResult;
 
-import java.util.ArrayList;
-import java.util.List;
+import static org.parboiled.common.Preconditions.checkArgNotNull;
 
 /**
  * The most basic of all {@link ParseRunner} implementations. It runs a rule against a given input text and builds a

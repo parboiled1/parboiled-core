@@ -16,8 +16,9 @@
 
 package org.parboiled.support;
 
-import static org.parboiled.common.Preconditions.*;
 import java.util.Iterator;
+
+import static org.parboiled.common.Preconditions.checkArgument;
 
 /**
  * An implementation of a stack of value objects providing an efficient snapshot capability and a number of convenience

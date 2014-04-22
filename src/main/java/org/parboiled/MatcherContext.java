@@ -23,16 +23,28 @@ import org.parboiled.errors.BasicParseError;
 import org.parboiled.errors.GrammarException;
 import org.parboiled.errors.ParseError;
 import org.parboiled.errors.ParserRuntimeException;
-import org.parboiled.matchers.*;
+import org.parboiled.matchers.ActionMatcher;
+import org.parboiled.matchers.Matcher;
+import org.parboiled.matchers.ProxyMatcher;
+import org.parboiled.matchers.SequenceMatcher;
+import org.parboiled.matchers.TestMatcher;
+import org.parboiled.matchers.TestNotMatcher;
 import org.parboiled.parserunners.RecoveringParseRunner;
-import org.parboiled.support.*;
+import org.parboiled.support.Checks;
+import org.parboiled.support.IndexRange;
+import org.parboiled.support.MatcherPath;
+import org.parboiled.support.MatcherPosition;
+import org.parboiled.support.ParseTreeUtils;
+import org.parboiled.support.Position;
+import org.parboiled.support.ValueStack;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.HashSet;
 
+import static org.parboiled.common.Preconditions.checkArgNotNull;
+import static org.parboiled.common.Preconditions.checkArgument;
 import static org.parboiled.errors.ErrorUtils.printParseError;
-import static org.parboiled.common.Preconditions.*;
 import static org.parboiled.matchers.MatcherUtils.unwrap;
 
 /**
