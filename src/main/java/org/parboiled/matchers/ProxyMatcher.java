@@ -16,13 +16,12 @@
 
 package org.parboiled.matchers;
 
+import static org.parboiled.common.Preconditions.*;
 import org.parboiled.MatcherContext;
 import org.parboiled.Rule;
 import org.parboiled.matchervisitors.MatcherVisitor;
 
 import java.util.List;
-
-import static org.parboiled.common.Preconditions.*;
 
 /**
  * A {@link Matcher} that delegates all {@link Rule} and {@link Matcher} interface methods to another {@link Matcher}.
@@ -234,8 +233,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
         if (matcher instanceof ProxyMatcher) {
             ProxyMatcher proxyMatcher = (ProxyMatcher) matcher;
             if (proxyMatcher.dirty) proxyMatcher.apply();
-            return proxyMatcher.target == null ? proxyMatcher
-                : proxyMatcher.target;
+            return proxyMatcher.target;
         }
         return matcher;
     }
