@@ -152,7 +152,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
         }
 
         // we already have a target to which we can directly apply the label
-        Rule inner = unwrap(target);
+        Rule inner = tryUnwrap(target);
         target = (Matcher) inner.label(label); // since relabelling might change the instance we have to update it
         setLabel(null);
         return target;
@@ -166,7 +166,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
         }
 
         // we already have a target to which we can directly apply the marker
-        Rule inner = unwrap(target);
+        Rule inner = tryUnwrap(target);
         target = (Matcher) inner.suppressNode(); // since this might change the instance we have to update it
         setNodeSuppressed(false);
         return target;
@@ -180,7 +180,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
         }
 
         // we already have a target to which we can directly apply the marker
-        Rule inner = unwrap(target);
+        Rule inner = tryUnwrap(target);
         target = (Matcher) inner.suppressSubnodes(); // since this might change the instance we have to update it
         setSubnodesSuppressed(false);
         return target;
@@ -194,7 +194,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
         }
 
         // we already have a target to which we can directly apply the marker
-        Rule inner = unwrap(target);
+        Rule inner = tryUnwrap(target);
         target = (Matcher) inner.skipNode(); // since this might change the instance we have to update it
         setNodeSkipped(false);
         return target;
@@ -208,7 +208,7 @@ public class ProxyMatcher implements Matcher, Cloneable {
         }
 
         // we already have a target to which we can directly apply the marker
-        Rule inner = unwrap(target);
+        Rule inner = tryUnwrap(target);
         target = (Matcher) inner.memoMismatches(); // since this might change the instance we have to update it
         setMemoMismatches(false);
         return target;
@@ -224,12 +224,16 @@ public class ProxyMatcher implements Matcher, Cloneable {
     }
 
     /**
-     * Retrieves the innermost Matcher that is not a ProxyMatcher.
+     * Retrieves the innermost possible Matcher that is not a ProxyMatcher.
+     *
+     * <p>If the matcher given as an argument is <em>not</em> a proxy, then it
+     * is returned as is. If it is a proxy but is not armed (ie, its target is
+     * null), it is also returned as is.</p>
      *
      * @param matcher the matcher to unwrap
-     * @return the given instance if it is not a ProxyMatcher, otherwise the innermost non-proxy Matcher
+     * @return see description
      */
-    public static Matcher unwrap(Matcher matcher) {
+    public static Matcher tryUnwrap(Matcher matcher) {
         if (matcher instanceof ProxyMatcher) {
             ProxyMatcher proxyMatcher = (ProxyMatcher) matcher;
             if (proxyMatcher.dirty) proxyMatcher.apply();

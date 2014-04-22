@@ -101,7 +101,7 @@ public class MatcherContext<V> implements Context<V> {
                 checkArgNotNull(parseErrors, "parseErrors"), checkArgNotNull(matchHandler, "matchHandler"),
                 null, 0, fastStringMatching,  new HashSet<MatcherPosition>());
         this.currentChar = inputBuffer.charAt(0);
-        this.matcher = ProxyMatcher.unwrap(checkArgNotNull(matcher, "matcher"));
+        this.matcher = ProxyMatcher.tryUnwrap(checkArgNotNull(matcher, "matcher"));
         this.nodeSuppressed = matcher.isNodeSuppressed();
     }
 
