@@ -5,6 +5,9 @@ This package contains the core mechanics or Parboiled1.
 See the [project info page](https://github.com/parboiled1/project-info) for more
 information, including available versions.
 
+**This repository is obsolete**; it has been superseded by
+[grappa](https://github.com/parboiled1/grappa).
+
 ## How to build
 
 **You must have a JDK version 6 or 7 for this package to work**. Make sure that
